@@ -80,6 +80,9 @@ namespace HelloDungeon
                 Console.WriteLine("+1 Smoke");
 
             }
+                Console.WriteLine("Press any Key to Continue");
+                Console
+
             { 
             }
         }
