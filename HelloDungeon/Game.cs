@@ -64,7 +64,7 @@ namespace HelloDungeon
                 
                 Console.ReadKey(true);  
                 Console.Clear();
-
+                
             }
                 //the results of my decisions.
                 if (playerChoice == "1")
@@ -112,14 +112,15 @@ namespace HelloDungeon
                     Console.WriteLine("What do you do now?");
                     Console.ReadLine();
 
-
+                while (playerChoice != "1" && playerChoice != "2" && playerChoice != "3")
+                {
                     Console.WriteLine("1. Continue past his unconcious body.");                //new list choices
                     Console.WriteLine("2. Search his pockets.");
                     Console.WriteLine("3. Finish the job.");
 
                     //second choice input
                     playerChoice = Console.ReadLine();
-
+                }
                 }
             if (playerChoice == "1")
             {
@@ -135,8 +136,8 @@ namespace HelloDungeon
                 Console.WriteLine("You killed the old man.");
                 Console.ReadLine();
                 Console.WriteLine("What do you do now?");
-            }
-                    Console.WriteLine("2. Search his pockets.");                              //list #3
+            } while (playerChoice != "1" && playerChoice != "2")
+                Console.WriteLine("2. Search his pockets.");                              //list #3
                     Console.WriteLine("3. Finish the job.");
 
                      if (playerChoice == "2")
