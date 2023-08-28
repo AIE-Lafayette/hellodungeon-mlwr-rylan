@@ -18,7 +18,7 @@ namespace HelloDungeon
             bool playerIsAlive = true;
             float health = 100.0f * 2;
             float shield = 0f;
-            string playerName = "Rylan Babers";
+            string playerName;
             string playerChoice;
             bool hasSmoke = false;
             
@@ -32,8 +32,10 @@ namespace HelloDungeon
             playerName = firstName + lastName;
 
             //Display name to be said again
-            //Console.WriteLine(playerName);
-
+            Console.Write("Are you ready " + playerName + " ?");
+           Console.ReadKey(true);
+            Console.ReadLine();
+            Console.Clear();
             //decision starter
             Console.WriteLine("Youre randomly approached by a dirty guy.");
             Console.ReadLine();
@@ -88,17 +90,53 @@ namespace HelloDungeon
                 Console.Clear();
 
             {
-                //after you say yes
+                //after you react
                 Console.WriteLine("Congrats!!! You made it past old man.");
                 Console.ReadKey(true);
                 Console.WriteLine("He is now on the ground gasping for breath.");
+                
                 Console.ReadLine();
                 Console.WriteLine("What do you do now?");
                 Console.ReadLine();
-                Console.WriteLine("1. Continue past his severed body.");
+                
+                
+                Console.WriteLine("1. Continue past his unconcious body.");
                 Console.WriteLine("2. Search his pockets.");
                 Console.WriteLine("3. Finish the job.");
+
+                //second choice input
+                playerChoice = Console.ReadLine();
+
             }
+            if (playerChoice == "1")
+            {
+                Console.WriteLine("You walk past the old dead man.");
+                Console.ReadLine();
+                Console.WriteLine("He grabs you by the leg!!!");
+
+                Console.ReadLine();              
+                Console.Clear();
+                Console.WriteLine("PRESS H TO STOMP HIM");
+                Console.ReadKey(true);
+                Console.Clear();
+                Console.WriteLine("You killed the old man.");
+                Console.ReadLine();
+                Console.WriteLine("What do you do now?");
+
+                Console.WriteLine("2. Search his pockets.");
+                Console.WriteLine("3. Finish the job.");
+
+                //if (playerChoice == "2")
+                //{ 
+
+
+
+
+
+
+
+            }
+
         }
     }
 }
