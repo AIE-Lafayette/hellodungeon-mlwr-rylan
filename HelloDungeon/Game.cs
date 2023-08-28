@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
 using System.Security.Authentication;
@@ -52,7 +53,7 @@ namespace HelloDungeon
 
             //take players input.
             playerChoice = Console.ReadLine();
-
+          
             //the results of my decisions.
             if (playerChoice == "1")
             {
@@ -65,11 +66,12 @@ namespace HelloDungeon
            else if (playerChoice == "2")
             {
                 Console.WriteLine("You decline the smoke.");
+                Console.Clear();
                 Console.WriteLine("Old man gets mad and attacks.");
+                Console.ReadLine();
                 Console.WriteLine("You lose 2 health. He is weak.");
-
                 health -= 2;
-                Console.WriteLine("health is now 98.");
+                Console.WriteLine("Health is now 98.");
             }
             else if (playerChoice == "3")
             {
@@ -81,9 +83,21 @@ namespace HelloDungeon
 
             }
                 Console.WriteLine("Press any Key to Continue");
-                Console
+                Console.ReadKey(true);
 
-            { 
+                Console.Clear();
+
+            {
+                //after you say yes
+                Console.WriteLine("Congrats!!! You made it past old man.");
+                Console.ReadKey(true);
+                Console.WriteLine("He is now on the ground gasping for breath.");
+                Console.ReadLine();
+                Console.WriteLine("What do you do now?");
+                Console.ReadLine();
+                Console.WriteLine("1. Continue past his severed body.");
+                Console.WriteLine("2. Search his pockets.");
+                Console.WriteLine("3. Finish the job.");
             }
         }
     }
