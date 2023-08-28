@@ -21,7 +21,7 @@ namespace HelloDungeon
             float health = 100.0f * 2;
             float shield = 0f;
             string playerName;
-            string playerChoice;
+            string playerChoice = "";
             bool hasSmoke = false;
 
             //while (gamePlay == true)
@@ -50,37 +50,45 @@ namespace HelloDungeon
                 Console.WriteLine("If you take a whiff of this you'll feel");
                 Console.WriteLine("more geeked than ever");
                 Console.Clear();
-                Console.WriteLine("Do you ingest the substance?");
+               
+            while (playerChoice != "1" && playerChoice != "2" && playerChoice != "3")
+            {
 
-                //Display Choices
+                //Display Choices 
+                Console.WriteLine("Do you ingest the substance?");
                 Console.WriteLine("1. Yes");
                 Console.WriteLine("2. No");
                 Console.WriteLine("3. Run off with the sack.");
+                playerChoice = Console.ReadLine();                                                  //take players input.
+                Console.WriteLine("Invalid Choice"); 
+                
+                Console.ReadKey(true);  
+                Console.Clear();
 
-                //take players input.
-                playerChoice = Console.ReadLine();
-
+            }
                 //the results of my decisions.
                 if (playerChoice == "1")
                 {
                     Console.Clear();
                     Console.WriteLine("The smoke is super smooth and taste delightful.");
+                    Console.WriteLine("                                               ");
+                Console.ReadLine();
                     Console.WriteLine("You begin to laugh and see things funny. You gain 50 shield.");
 
                     shield += 50;
                 }
-                else if (playerChoice == "2")
+                else if (playerChoice == "2")                           //no smoke
                 {
                     Console.WriteLine("You decline the smoke.");
                     Console.Clear();
-                    Console.WriteLine("Old man gets mad and attacks.");
+                    Console.WriteLine("Old man gets mad and attacks.");             //reason for gasping om
                     Console.ReadLine();
                     Console.WriteLine("You lose 2 health. He is weak.");
                     health -= 2;
                     Console.WriteLine("Health is now 98.");
                 }
                 else if (playerChoice == "3")
-                {
+                {                                                                   //run off
                     Console.WriteLine("You reach for the old man's sack");
                     Console.Write("You take it and successfully run off.");
                     Console.WriteLine("+1 Smoke");
@@ -93,8 +101,8 @@ namespace HelloDungeon
                 Console.ReadKey(true);
 
                 Console.Clear();
-                if(playerChoice == "2")
-                {
+                if(playerChoice == "2")                                                 //after hurt old man
+                {                                                                     // only from 2
                     //after you react
                     Console.WriteLine("Congrats!!! You made it past old man.");
                     Console.ReadKey(true);
@@ -105,7 +113,7 @@ namespace HelloDungeon
                     Console.ReadLine();
 
 
-                    Console.WriteLine("1. Continue past his unconcious body.");
+                    Console.WriteLine("1. Continue past his unconcious body.");                //new list choices
                     Console.WriteLine("2. Search his pockets.");
                     Console.WriteLine("3. Finish the job.");
 
@@ -120,7 +128,7 @@ namespace HelloDungeon
                 Console.WriteLine("He grabs you by the leg!!!");
 
                 Console.ReadLine();
-                Console.Clear();
+                Console.Clear();                                                                //stomp event
                 Console.WriteLine("PRESS H TO STOMP HIM");
                 Console.ReadKey(true);
                 Console.Clear();
@@ -128,15 +136,15 @@ namespace HelloDungeon
                 Console.ReadLine();
                 Console.WriteLine("What do you do now?");
             }
-                    Console.WriteLine("2. Search his pockets.");
+                    Console.WriteLine("2. Search his pockets.");                              //list #3
                     Console.WriteLine("3. Finish the job.");
 
                      if (playerChoice == "2")
                     {
                      Console.Clear();
-                     Console.WriteLine("You run the old mans pocket and find:");
+                     Console.WriteLine("You run the old mans pockets and find:");
                      Console.WriteLine("- Bag of Smoke");
-                     Console.WriteLine("- Revolver");
+                     Console.WriteLine("- Revolver");                                       //pockets list
                      Console.WriteLine("- Pecan Pie");
                      Console.WriteLine("- Stack of Cash");
 
