@@ -13,108 +13,113 @@ namespace HelloDungeon
     {
         public void Run()
         {
+
+
             //create and initialize variables
             int areaNumber = 0;
-            bool playerIsAlive = true;
+            bool gamePlay = true;
             float health = 100.0f * 2;
             float shield = 0f;
             string playerName;
             string playerChoice;
             bool hasSmoke = false;
-            
-            //get character name
-            Console.WriteLine("WELCOME! WHATS YOUR NAME?");
+
+            //while (gamePlay == true)
+            //{
+                //get character name
+                Console.WriteLine("WELCOME! WHATS YOUR NAME?");
 
 
-            //get the entered name
-            string firstName = Console.ReadLine();
-            string lastName = Console.ReadLine();
-            playerName = firstName + lastName;
+                //get the entered name
+                string firstName = Console.ReadLine();
+                string lastName = Console.ReadLine();
+                playerName = firstName + lastName;
 
-            //Display name to be said again
-            Console.Write("Are you ready " + playerName + " ?");
-           Console.ReadKey(true);
-            Console.ReadLine();
-            Console.Clear();
-            //decision starter
-            Console.WriteLine("Youre randomly approached by a dirty guy.");
-            Console.ReadLine();
-            Console.WriteLine("He offers you to try some stinky smoke.");
-            Console.ReadLine();
-           
-
-            Console.WriteLine("If you take a whiff of this you'll feel");
-            Console.WriteLine("more geeked than ever");
-            Console.Clear();
-            Console.WriteLine("Do you ingest the substance?");
-
-            //Display Choices
-            Console.WriteLine("1. Yes");
-            Console.WriteLine("2. No");
-            Console.WriteLine("3. Run off with the sack.");
-
-            //take players input.
-            playerChoice = Console.ReadLine();
-          
-            //the results of my decisions.
-            if (playerChoice == "1")
-            {
-                Console.Clear();
-                Console.WriteLine("The smoke is super smooth and taste delightful.");
-                Console.WriteLine("You begin to laugh and see things funny. You gain 50 shield.");
-
-                shield += 50;
-            }
-           else if (playerChoice == "2")
-            {
-                Console.WriteLine("You decline the smoke.");
-                Console.Clear();
-                Console.WriteLine("Old man gets mad and attacks.");
+                //Display name to be said again
+                Console.Write("Are you ready " + playerName + " ?");
+                Console.ReadKey(true);
                 Console.ReadLine();
-                Console.WriteLine("You lose 2 health. He is weak.");
-                health -= 2;
-                Console.WriteLine("Health is now 98.");
-            }
-            else if (playerChoice == "3")
-            {
-                Console.WriteLine("You reach for the old man's sack");
-                Console.WriteLine("You take it and successfully run off.");
+                Console.Clear();
+                //decision starter
+                Console.WriteLine("Youre randomly approached by a dirty guy...");
+                Console.ReadLine();
+                Console.WriteLine("He offers you to try some stinky smoke.");
+                Console.ReadLine();
 
-                hasSmoke = true;
-                Console.WriteLine("+1 Smoke");
 
-            }
+                Console.WriteLine("If you take a whiff of this you'll feel");
+                Console.WriteLine("more geeked than ever");
+                Console.Clear();
+                Console.WriteLine("Do you ingest the substance?");
+
+                //Display Choices
+                Console.WriteLine("1. Yes");
+                Console.WriteLine("2. No");
+                Console.WriteLine("3. Run off with the sack.");
+
+                //take players input.
+                playerChoice = Console.ReadLine();
+
+                //the results of my decisions.
+                if (playerChoice == "1")
+                {
+                    Console.Clear();
+                    Console.WriteLine("The smoke is super smooth and taste delightful.");
+                    Console.WriteLine("You begin to laugh and see things funny. You gain 50 shield.");
+
+                    shield += 50;
+                }
+                else if (playerChoice == "2")
+                {
+                    Console.WriteLine("You decline the smoke.");
+                    Console.Clear();
+                    Console.WriteLine("Old man gets mad and attacks.");
+                    Console.ReadLine();
+                    Console.WriteLine("You lose 2 health. He is weak.");
+                    health -= 2;
+                    Console.WriteLine("Health is now 98.");
+                }
+                else if (playerChoice == "3")
+                {
+                    Console.WriteLine("You reach for the old man's sack");
+                    Console.Write("You take it and successfully run off.");
+                    Console.WriteLine("+1 Smoke");
+                    hasSmoke = true;
+                }
+
+
+                
                 Console.WriteLine("Press any Key to Continue");
                 Console.ReadKey(true);
 
                 Console.Clear();
+                if(playerChoice == "2")
+                {
+                    //after you react
+                    Console.WriteLine("Congrats!!! You made it past old man.");
+                    Console.ReadKey(true);
+                    Console.WriteLine("He is now on the ground gasping for breath.");
 
-            {
-                //after you react
-                Console.WriteLine("Congrats!!! You made it past old man.");
-                Console.ReadKey(true);
-                Console.WriteLine("He is now on the ground gasping for breath.");
-                
-                Console.ReadLine();
-                Console.WriteLine("What do you do now?");
-                Console.ReadLine();
-                
-                
-                Console.WriteLine("1. Continue past his unconcious body.");
-                Console.WriteLine("2. Search his pockets.");
-                Console.WriteLine("3. Finish the job.");
+                    Console.ReadLine();
+                    Console.WriteLine("What do you do now?");
+                    Console.ReadLine();
 
-                //second choice input
-                playerChoice = Console.ReadLine();
 
-            }
+                    Console.WriteLine("1. Continue past his unconcious body.");
+                    Console.WriteLine("2. Search his pockets.");
+                    Console.WriteLine("3. Finish the job.");
+
+                    //second choice input
+                    playerChoice = Console.ReadLine();
+
+                }
             if (playerChoice == "1")
             {
                 Console.WriteLine("You walk past the old dead man.");
                 Console.ReadLine();
                 Console.WriteLine("He grabs you by the leg!!!");
 
-                Console.ReadLine();              
+                Console.ReadLine();
                 Console.Clear();
                 Console.WriteLine("PRESS H TO STOMP HIM");
                 Console.ReadKey(true);
@@ -122,21 +127,28 @@ namespace HelloDungeon
                 Console.WriteLine("You killed the old man.");
                 Console.ReadLine();
                 Console.WriteLine("What do you do now?");
-
-                Console.WriteLine("2. Search his pockets.");
-                Console.WriteLine("3. Finish the job.");
-
-                //if (playerChoice == "2")
-                //{ 
-
-
-
-
-
-
-
             }
+                    Console.WriteLine("2. Search his pockets.");
+                    Console.WriteLine("3. Finish the job.");
 
+                     if (playerChoice == "2")
+                    {
+                     Console.Clear();
+                     Console.WriteLine("You run the old mans pocket and find:");
+                     Console.WriteLine("- Bag of Smoke");
+                     Console.WriteLine("- Revolver");
+                     Console.WriteLine("- Pecan Pie");
+                     Console.WriteLine("- Stack of Cash");
+
+
+
+
+
+
+                     }
+                
+                }   
+            //}
         }
     }
-}
+
