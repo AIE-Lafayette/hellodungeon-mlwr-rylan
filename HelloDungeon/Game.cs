@@ -222,18 +222,18 @@ namespace HelloDungeon
             }
             while (playerChoice != "2" && playerChoice != "3")
             {
-                Console.WriteLine("2. Search his pockets.");                              //list #3
-                Console.WriteLine("3. Finish the job.");
+                Console.WriteLine("5. Search his pockets.");                              //list #3
+                Console.WriteLine("6. Finish the job.");
                 playerChoice = Console.ReadLine();
 
-                if (playerChoice != "2" && playerChoice != "3")
+                if (playerChoice != "5" && playerChoice != "6")
                 {
                     
                     Console.WriteLine("Not an Answer.");
                 }
             }
 
-            if (playerChoice == "2")
+            if (playerChoice == "5")
             {
                 Console.Clear();
                 Console.WriteLine("You run the old mans pockets and find:");
