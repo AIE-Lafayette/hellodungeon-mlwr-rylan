@@ -174,10 +174,10 @@ namespace HelloDungeon
 
                     Console.WriteLine("1.Hit him back!");
                     Console.WriteLine("2.Run");
-                    
 
 
-             
+
+            Console.WriteLine("You WIN! COMING SOON");
 
         }
     } 
