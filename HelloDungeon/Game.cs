@@ -135,7 +135,7 @@ namespace HelloDungeon
             Console.WriteLine("1.Continue Journey");
 
             playerChoice = Console.ReadLine();
-
+            
 
 
         }
@@ -143,8 +143,11 @@ namespace HelloDungeon
         {
             Console.WriteLine("Continued To Be....");
             Console.ReadLine();
+            Console.ReadKey(true);  
             Console.WriteLine("bad time for a yoda reference?");
-            Console.Clear();
+            Console.ReadLine();
+            Console.WriteLine(">> To Continue Key Any Press <<");
+            Console.ReadKey();
         }
       
         public void Run()
@@ -158,14 +161,12 @@ namespace HelloDungeon
 
                 DisplayScene2();
                 Console.Clear();
+                
+
+             if(playerChoice == "1")
+             {
                 DisplayeEndScene();
-
-
-
-
-
-
-                 
+             }
 
         }
     } 
