@@ -139,7 +139,13 @@ namespace HelloDungeon
 
 
         }
-
+        void DisplayeEndScene()
+        {
+            Console.WriteLine("Continued To Be....");
+            Console.ReadLine();
+            Console.WriteLine("bad time for a yoda reference?");
+            Console.Clear();
+        }
       
         public void Run()
         {
@@ -152,32 +158,14 @@ namespace HelloDungeon
 
                 DisplayScene2();
                 Console.Clear();
+                DisplayeEndScene();
 
 
 
 
 
 
-
-                 if (playerChoice == "2")
-                 { 
-                    Console.WriteLine("OUCH!!! What do you do back?");
-                    Console.ReadKey(true);
-                    Console.ReadLine();
-                    Console.Clear();
-
-
-                    
-                    
-
-                 }
-
-                    Console.WriteLine("1.Hit him back!");
-                    Console.WriteLine("2.Run");
-
-
-
-            Console.WriteLine("You WIN! COMING SOON");
+                 
 
         }
     } 
